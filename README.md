@@ -36,8 +36,8 @@ After docker-compose you hit the below URL to see where the requests are served
 https://domain.in/ => server static page
 https://domcin.in/api/ping => reverse proxy to the backend webapp
 
-default.conf ```
-server {
+default.conf 
+```server {
         listen 80 default_server;
         listen [::]:80 default_server;
         listen 8443 ssl http2 default_server;
@@ -55,7 +55,8 @@ server {
     location /api/ {
         proxy_pass http://192.168.0.112:5000/;
     }
-}
+} 
 ```
+
 For reverse proxy the trailing / on the location /api/ and the end of proxy_pass is very important, without the trailing /, the reverse proxy does not work.
 Refer - https://serverfault.com/questions/379675/nginx-reverse-proxy-url-rewrite
