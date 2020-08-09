@@ -11,6 +11,6 @@ Simple working nginx-ssl setup.
     -subj "/CN=domain.in/O=domain-in-tls"
  ```
 
-* Make sure the docker-compose.yaml files has the same files created in the previous step. *
+*Make sure the docker-compose.yaml files has the same files created in the previous step.*
 
-* docker-compose up
+* Step 2: docker-compose up
