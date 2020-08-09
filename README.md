@@ -37,7 +37,8 @@ https://domain.in/ => server static page
 https://domcin.in/api/ping => reverse proxy to the backend webapp
 
 default.conf 
-```server {
+```
+server {
         listen 80 default_server;
         listen [::]:80 default_server;
         listen 8443 ssl http2 default_server;
