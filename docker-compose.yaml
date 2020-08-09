@@ -15,11 +15,11 @@ services:
         source: ./default.conf
         target: /etc/nginx/conf.d/default.conf
       - type: bind
-        source: ./cert/domain_in.key
+        source: ./domain_in.key
         target: /etc/nginx/cert/domain_in.key
         read_only: true
       - type: bind
-        source: ./cert/domain_in.crt
+        source: ./domain_in.crt
         target: /etc/nginx/cert/domain_in.crt
         read_only: true
       - type: bind
