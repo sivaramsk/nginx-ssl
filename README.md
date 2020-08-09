@@ -60,4 +60,5 @@ server {
 ```
 
 For reverse proxy the trailing / on the location /api/ and the end of proxy_pass is very important, without the trailing /, the reverse proxy does not work.
+
 Refer - https://serverfault.com/questions/379675/nginx-reverse-proxy-url-rewrite
