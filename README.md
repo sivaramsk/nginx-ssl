@@ -5,7 +5,8 @@ Simple working nginx-ssl setup.
 
 * Step 1: Create the certificates and key with the below command 
 
-```openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -out domain_in.crt \
     -keyout domain_in.key \
     -subj "/CN=domain.in/O=domain-in-tls"
