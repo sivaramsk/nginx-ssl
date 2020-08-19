@@ -13,7 +13,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -subj "/CN=domain.in/O=domain-in-tls"
  ```
 
-*Make sure the docker-compose.yaml files has the same files created in the previous step.*
+*Make sure the docker-compose.yaml cert and key files has the same name created in the above command .*
 
 * Step 3: docker-compose up
     
