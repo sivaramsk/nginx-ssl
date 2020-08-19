@@ -23,6 +23,7 @@ The webapp is a simple http server written in golang which serves the below rest
 * /
 * /ping
 * /time
+* /upload 
 The server runs in the port 5000 and the docker-compose.yaml maps the port to the host's 5000 port. You have edit the default.conf to change the hardcoded backend ip to your host's ip.
 
 
@@ -61,5 +62,14 @@ server {
 ```
 
 For reverse proxy the trailing / on the location /api/ and the end of proxy_pass is very important, without the trailing /, the reverse proxy does not work.
+
+## How to upload?
+
+After the server is running, run the below curl command 
+```
+curl -X POST -vvvv http://127.0.0.1:5000/upload -F "myFile=@/tmp/out.pdf
+```
+
+The input filename is /tmp/out.pdf, make sure the file is present. The output would be in the current path under the folder upload withsome random numbers added to the file.
 
 Refer - https://serverfault.com/questions/379675/nginx-reverse-proxy-url-rewrite
