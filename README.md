@@ -20,22 +20,22 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 ## What does the webapp do?
 
 The webapp is a simple http server written in golang which serves the below rest api
-    * /
-    * /ping
-    * /time
+* /
+* /ping
+* /time
 The server runs in the port 5000 and the docker-compose.yaml maps the port to the host's 5000 port. You have edit the default.conf to change the hardcoded backend ip to your host's ip.
 
 
 ## What does this server do? 
 
 The nginx server serves
-    1. A static html page
-    2. A reverse proxy to a backend server(webapp) started as part of the docker-compose. 
+* A static html page
+* A reverse proxy to a backend server(webapp) started as part of the docker-compose. 
     
 After docker-compose you hit the below URL to see where the requests are served 
 
-https://domain.in/ => server static page
-https://domain.in/api/ping => reverse proxy to the backend webapp
+1. https://domain.in/ => server static page
+1. https://domain.in/api/ping => reverse proxy to the backend webapp
 
 default.conf 
 ```
