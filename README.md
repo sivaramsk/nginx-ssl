@@ -3,7 +3,8 @@ Simple working nginx-ssl setup.
 
 ## How to start the nginx server?
 
-* Step 1: Create the certificates and key with the below command 
+* Step 1: github clone https://github.com/sivaramsk/nginx-ssl.git
+* Step 2: Create the certificates and key with the below command 
 
 ```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
@@ -14,7 +15,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 *Make sure the docker-compose.yaml files has the same files created in the previous step.*
 
-* Step 2: docker-compose up
+* Step 3: docker-compose up
     
 ## What does the webapp do?
 
