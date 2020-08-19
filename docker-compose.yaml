@@ -2,10 +2,14 @@ version: "3.8"
 services: 
   golang_webapp:
     container_name: webapp
-    image: sivaramsk/webapp:0.7
+    image: sivaramsk/webapp:0.8
     ports:
       - "5000:5000"
     restart: always
+    volumes: 
+      - type: bind
+        source: ./upload
+        target: /tmp/upload
 
   nginx:
     container_name: productions_nginx
@@ -15,16 +19,16 @@ services:
         source: ./default.conf
         target: /etc/nginx/conf.d/default.conf
       - type: bind
-        source: ./domain_in.key
-        target: /etc/nginx/cert/domain_in.key
+        source: ./cert/blueforge_in.key
+        target: /etc/nginx/cert/blueforge_in.key
         read_only: true
       - type: bind
-        source: ./domain_in.crt
-        target: /etc/nginx/cert/domain_in.crt
+        source: ./cert/blueforge_in.crt
+        target: /etc/nginx/cert/blueforge_in.crt
         read_only: true
       - type: bind
         source: ./index.html
         target: /var/www/localhost/htdocs/index.html
     ports:
-      - 8080:8080
-      - 8443:8443
+      - 80:80
+      - 443:443
