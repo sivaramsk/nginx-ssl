@@ -35,7 +35,7 @@ The nginx server serves
 After docker-compose you hit the below URL to see where the requests are served 
 
 https://domain.in/ => server static page
-https://domcin.in/api/ping => reverse proxy to the backend webapp
+https://domain.in/api/ping => reverse proxy to the backend webapp
 
 default.conf 
 ```
